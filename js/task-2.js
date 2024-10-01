@@ -1,6 +1,11 @@
-function getShippingMessage(country, price, deliveryFee) {
-    const totalPrice = price + deliveryFee;
-    return `Shipping to ${country} will cost ${totalPrice} credits`;
- }
- 
- console.log(getShippingMessage("Australia", 120, 50));
+function formatMessage(message, maxLength) {
+
+    if (message.length <= maxLength) {
+      return message; 
+    } else {
+
+      return message.slice(0, maxLength) + "...";
+    }
+  }
+  
+  console.log(formatMessage("Hello, world!", 10));  
